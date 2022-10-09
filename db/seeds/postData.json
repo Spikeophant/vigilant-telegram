@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Dracula UI",
+    "body": "A cool UI Framework that's dark mode first!  I was going to write this blog application using it however I did not have the time with the project going as well.",
+    "author_id": 1
+  },
+  {
+    "title": "Warp Terminal",
+    "body": "Cool terminal emulator you should try it!",
+    "author_id": 1
+  },
+  {
+    "title": "Dash documentation",
+    "body": "Offline documentation for MacOS, neat if you wanna code while camping or on an airplane.",
+    "author_id": 1
+  }
+]

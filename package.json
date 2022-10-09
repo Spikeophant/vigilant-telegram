@@ -1,5 +1,14 @@
 {
+  "name": "vigilant-telegram",
+  "version": "0.0.1",
+  "description": "A simple blogging platform.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node db/seeds/seed.js"
+  },
   "dependencies": {
+    "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-handlebars": "^6.0.6",
