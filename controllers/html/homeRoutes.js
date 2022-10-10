@@ -5,7 +5,8 @@ router.get('/', async (req, res) => {
   try {
     const posts = await Post.findAll( {
       raw: true,
-      include: User,
+      nest: true,
+      include: [User],
       order: [['timestamp', 'ASC']],
     });
     console.log(posts);
