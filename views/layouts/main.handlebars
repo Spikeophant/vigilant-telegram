@@ -20,20 +20,18 @@
     {{{ body }}}
     </section>
     {{#unless logged_in}}
-    <section class="drac-card-subtle drac-rounded-2xl" id="login-section">
-        <h2>Login</h2>
+    <section class="drac-rounded-2xl" id="login-section">
+        <h2 class="drac-text-purple drac-heading">Login</h2>
 
         <form class="form login-form">
             <div class="form-group">
-                <label for="email-login">email:</label>
-                <input class="drac-input drac-input-purple drac-text-purple drac-m-xs" type="text" id="email-login" />
+                <input placeholder="Email" class="drac-input drac-input-purple drac-text-purple drac-m-xs" type="text" id="email-login" />
             </div>
             <div class="form-group">
-                <label for="password-login">password:</label>
-                <input class="form-input" type="password" id="password-login" />
+                <input placeholder="Password" class="drac-input drac-input-purple drac-text-purple drac-m-xs" type="password" id="password-login" />
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" type="submit">login</button>
+                <button class="drac-btn drac-btn-ghost drac-bg-purple-transparent drac-text-purple drac-m-sm" type="submit">login</button>
             </div>
         </form>
 
