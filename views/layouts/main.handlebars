@@ -19,7 +19,8 @@
     <section class="drac-w-6xl drac-mr-md">
     {{{ body }}}
     </section>
-    <section class="drac-card-subtle drac-rounded-2xl" id="login-section" style="visibility: hidden">
+    {{#unless logged_in}}
+    <section class="drac-card-subtle drac-rounded-2xl" id="login-section">
         <h2>Login</h2>
 
         <form class="form login-form">
@@ -37,6 +38,7 @@
         </form>
 
         <script src="/js/login.js"></script>
+    {{/unless}}
     </section>
 </main>
 
