@@ -7,19 +7,36 @@
     <link rel="stylesheet" href="/css/dracula-ui.css" />
 </head>
 
-<body class="drac-scrollbar-purple drac-bg-grey">
+<body class="drac-scrollbar-purple drac-bg-black drac-text-center">
 <div class="drac-box">
-<header class="drac-d-flex justify-space-between align-center drac-p-lg">
-    <h1>
+<header class="drac-d-flex drac-text-center drac-p-lg">
+    <h1 class="drac-heading drac-heading-xl drac-text-pink drac-text-center">
         The Tech Blog
     </h1>
 </header>
-<main class="drac-w-3xl drac-d-inline-flex">
+    <hr class="drac-divider drac-border-cyan" />
+<main class="drac-w-6xl drac-d-inline-flex">
     <section class="drac-w-6xl drac-mr-md">
     {{{ body }}}
     </section>
-    <section class="drac-card-subtle drac-rounded-2xl">
-        Login
+    <section class="drac-card-subtle drac-rounded-2xl" id="login-section" style="visibility: hidden">
+        <h2>Login</h2>
+
+        <form class="form login-form">
+            <div class="form-group">
+                <label for="email-login">email:</label>
+                <input class="drac-input drac-input-purple drac-text-purple drac-m-xs" type="text" id="email-login" />
+            </div>
+            <div class="form-group">
+                <label for="password-login">password:</label>
+                <input class="form-input" type="password" id="password-login" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">login</button>
+            </div>
+        </form>
+
+        <script src="/js/login.js"></script>
     </section>
 </main>
 
