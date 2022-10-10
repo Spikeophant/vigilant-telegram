@@ -25,6 +25,11 @@ Post.init(
         key: 'id',
       },
     },
+    timestamp: {
+      type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: new Date(),
+    }
   },
   {
     sequelize,
