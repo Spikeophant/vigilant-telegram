@@ -19,7 +19,7 @@ router.post('/post', withAuth, async (req, res) => {
     await Post.create( {
       ...req.body,
     author_id: req.session.user_id});
-    res.location('/');
+    res.redirect('/');
   } catch (err) {
     console.log(err);
     res.status(500).render('error', {logged_in: req.session.logged_in});
