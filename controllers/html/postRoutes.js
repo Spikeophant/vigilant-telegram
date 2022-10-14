@@ -13,6 +13,20 @@ router.get('/post', withAuth, async (req, res) => {
   }
 });
 
+router.get('/post/:id', withAuth, async (req, res) => {
+  try {
+    const post = await Post.findByPk(req.params.id, {
+      include: User,
+      raw: true,
+      nest: true,
+    });
+    res.render('singlePost', {post, logged_in: req.session.logged_in})
+  } catch (err) {
+    console.log(err);
+    res.status(500).render('error');
+  }
+});
+
 router.post('/post', withAuth, async (req, res) => {
   console.log(req.body);
   try {

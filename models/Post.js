@@ -26,7 +26,7 @@ Post.init(
       },
     },
     timestamp: {
-      type: DataTypes.DATEONLY,
+      type: DataTypes.DATE,
       allowNull: false,
       defaultValue: new Date(),
     }
