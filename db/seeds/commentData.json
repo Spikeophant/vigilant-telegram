@@ -1,0 +1,17 @@
+[
+  {
+    "author_id": 1,
+    "post_id": 1,
+    "body": "comment 1"
+  },
+  {
+    "author_id": 1,
+    "post_id": 2,
+    "body": "comment 2"
+  },
+  {
+    "author_id": 1,
+    "post_id": 1,
+    "body": "comment 3"
+  }
+]

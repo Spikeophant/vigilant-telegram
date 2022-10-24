@@ -10,5 +10,10 @@
 <div class="drac-box drac-text-white-secondary drac-mb-sm drac-rounded">
     <div class="drac-p-md">
         <h4 class="drac-text-purple">Comments:</h4>
+        {{#each post.comments as |comment|}}
+        <div class="drac-text-white-secondary drac-p-sm">
+            {{comment.body}}
+        </div>
+        {{/each}}
     </div>
 </div>

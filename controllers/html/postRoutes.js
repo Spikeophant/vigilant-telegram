@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post } = require('../../models');
+const { User, Post, Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/post', withAuth, async (req, res) => {
@@ -7,7 +7,6 @@ router.get('/post', withAuth, async (req, res) => {
     res.render('post', {logged_in: req.session.logged_in}
     );
   } catch (err) {
-    console.log(req.body)
     console.log(err);
     res.status(500).render('error', {logged_in: req.session.logged_in});
   }
@@ -16,10 +15,12 @@ router.get('/post', withAuth, async (req, res) => {
 router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const post = await Post.findByPk(req.params.id, {
-      include: User,
+      include: [{model: User},
+        {model: Comment}],
       raw: true,
       nest: true,
     });
+    console.log(post);
     res.render('singlePost', {post, logged_in: req.session.logged_in})
   } catch (err) {
     console.log(err);
