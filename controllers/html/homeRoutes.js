@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
       raw: true,
       nest: true,
       include: [User],
-      order: [['timestamp', 'DESC']],
+      order: [['createdAt', 'DESC']],
     });
     console.log(posts);
     res.render('homepage', {

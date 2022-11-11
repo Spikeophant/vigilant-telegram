@@ -15,8 +15,7 @@ router.get('/post', withAuth, async (req, res) => {
 router.get('/post/:id', withAuth, async (req, res) => {
   try {
     const post = await Post.findByPk(req.params.id, {
-      include: [{model: User},
-        {model: Comment}],
+      include: [Comment,User],
       raw: true,
       nest: true,
     });
