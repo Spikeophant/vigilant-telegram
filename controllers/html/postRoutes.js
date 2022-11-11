@@ -12,7 +12,8 @@ router.get('/post', withAuth, async (req, res) => {
   }
 });
 
-router.get('/post/:id', withAuth, async (req, res) => {
+
+router.get('/post/:id', withAuth, async  (req, res) => {
   try {
     const post = await Post.findByPk(req.params.id, {
       include: [Comment,User],
@@ -20,7 +21,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
       nest: true,
     });
     console.log(post);
-    res.render('singlePost', {post, logged_in: req.session.logged_in})
+    res.render('singlePost', {post, logged_in: req.session.logged})
   } catch (err) {
     console.log(err);
     res.status(500).render('error');
